@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ru" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Угадай число</title>
+  </head>
+  <body>
+    <script>
+    const start = alert('Игра - угадай число!!!')
+      const rndInt = Math.floor(Math.random() * 1000) + 1;
+      console.log(rndInt);
+      let i = 0;
+      while( i < 10 ) {
+        i++;
+        alert('Попытка №' + i);
+        let nomb = Number(prompt('Укажите число  от 0 до 1000'));
+
+        if (isNaN(nomb), nomb>1000, nomb===0) {
+          alert('Ошибка, ведите целое число от 0 до 1000 ');
+          let nomb = Number(prompt('Укажите число  от 0 до 1000'));
+        } else if(nomb==rndInt){
+          alert('Поздравляю ты угадал с ' + i + ' попытки,\n' + 'число ' + nomb + '!!!');
+          break;
+        } else if (nomb < rndInt && i<10) {
+          alert('Загадай число больше');
+        } else if (nomb > rndInt && i<10) {
+          alert('Загадай число меньше');
+        } else if (nomb!==rndInt, i = 10) {
+          alert('Game over');
+          break;
+
+        }
+     }
+
+
+    </script>
+
+  </body>
+</html>
